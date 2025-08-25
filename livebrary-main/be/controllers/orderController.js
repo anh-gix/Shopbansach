@@ -1,6 +1,7 @@
 const Order = require('../models/order');
 const Cart = require('../models/cart');
 const Book = require('../models/book');
+const order = require('../models/order');
 
 exports.createFromCart = async (req, res) => {
   try {
@@ -106,12 +107,38 @@ exports.createManual = async (req, res) => {
 // List all orders for owner
 exports.listAll = async (req, res) => {
   try {
-    const orders = await Order.find({}).sort({ createdAt: -1 });
-    return res.status(200).json(orders);
+    const orders = await Order.find({}).sort({ createdAt: -1 }).populate("createdBy", "username");
+    return res.status(200).json(orders.map(order => ({
+      _id: order._id,
+      createdBy: order.createdBy.username,
+      items: order.items,
+      subtotal: order.subtotal,
+      shippingFee: order.shippingFee,
+      total: order.total,
+      status: order.status
+    })));
   } catch (err) {
     return res.status(500).json({ message: 'Error fetching orders', error: err });
   }
 };
+
+exports.getById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const orderDetail = await Order.findById(id).populate("createdBy", "username")
+    return res.status(200).json({
+      _id: orderDetail._id,
+      createdBy: orderDetail.createdBy.username,
+      items: orderDetail.items,
+      subtotal: orderDetail.subtotal,
+      shippingFee: orderDetail.shippingFee,
+      total: orderDetail.total,
+      status: orderDetail.status
+    });
+  } catch (err) {
+    return res.status(500).json({ message: 'Error finding order', error: err });
+  }
+}
 
 exports.updateStatus = async (req, res) => {
   try {
@@ -123,6 +150,7 @@ exports.updateStatus = async (req, res) => {
   } catch (err) {
     return res.status(500).json({ message: 'Error updating order', error: err });
   }
+
 };
 
 

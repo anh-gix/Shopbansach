@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Sidebar_Admin from "../reuse/Sidebar_Admin";
+import { Form } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const OrdersList = () => {
   const [orders, setOrders] = useState([]);
@@ -11,6 +13,7 @@ const OrdersList = () => {
     });
     if (res.ok) setOrders(await res.json());
   };
+  console.log(orders);
 
   useEffect(() => { fetchAll(); }, []);
 
@@ -23,7 +26,20 @@ const OrdersList = () => {
     });
     if (res.ok) fetchAll();
   };
-
+  const getStatusClass = (status) => {
+    switch (status) {
+      case "pending":
+        return "bg-primary text-white";
+      case "completed":
+        return "bg-success text-white";
+      case "shipped":
+        return "bg-warning text-white";
+      case "cancelled":
+        return "bg-danger text-white";
+      default:
+        return "bg-secondary text-white";
+    }
+  };
   return (
     <div className="admin-container">
       <Sidebar_Admin />
@@ -34,7 +50,7 @@ const OrdersList = () => {
             <tr>
               <th>Mã</th>
               <th>Khách</th>
-              <th>Tổng</th>
+              <th>Tổng Tiền</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>
@@ -42,16 +58,20 @@ const OrdersList = () => {
           <tbody>
             {orders.map(o => (
               <tr key={o._id}>
-                <td>{o._id}</td>
-                <td>{o.customerName || '-'}</td>
+               <td> <Link to={`/admin/detail-order/${o._id}`}>{o._id}</Link></td>
+                <td>{o.createdBy || '-'}</td>
                 <td>{o.total?.toLocaleString('vi-VN')}₫</td>
                 <td>{o.status}</td>
                 <td>
-                  <select value={o.status} onChange={e => updateStatus(o._id, e.target.value)}>
-                    {['pending','paid','shipped','completed','cancelled'].map(s => (
+                  <Form.Select
+                    value={o.status}
+                    onChange={e => updateStatus(o._id, e.target.value)}
+                    className={getStatusClass(o.status)}
+                  >
+                    {['pending', 'paid', 'shipped', 'completed', 'cancelled'].map(s => (
                       <option key={s} value={s}>{s}</option>
                     ))}
-                  </select>
+                  </Form.Select>
                 </td>
               </tr>
             ))}

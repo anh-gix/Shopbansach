@@ -7,8 +7,8 @@ router.post('/create', verifyToken, orderController.createFromCart);
 router.get('/mine', verifyToken, orderController.getMyOrders);
 router.put('/:orderId/status', verifyToken, verifyAdmin, orderController.updateStatus);
 router.post('/manual', verifyToken, verifyAdmin, orderController.createManual);
-router.get('/all', verifyToken, verifyAdmin, orderController.listAll);
-
+router.get('/all', verifyToken, verifyAdmin ,orderController.listAll);
+router.get('/:id', verifyToken, verifyAdmin, orderController.getById);
 module.exports = router;
 
 

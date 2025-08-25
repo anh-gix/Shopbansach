@@ -17,6 +17,7 @@ import { ProtectedRoute } from "../services/ProtectedRoute";
 import NotAuthorized from "./components/user/NotAuthorized";
 import CartPage from "./components/user/CartPage";
 import MyOrders from "./components/user/MyOrders";
+import DetailOrder from "./components/admin/DetailOrder";
 
 function App() {
   return (
@@ -130,6 +131,14 @@ function App() {
           element={
             <ProtectedRoute requiredRole={false}>
               <OrdersList />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/detail-order/:id"
+          element={
+            <ProtectedRoute requiredRole={false}>
+              <DetailOrder />
             </ProtectedRoute>
           }
         />
