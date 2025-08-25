@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654327"
+  },
+  "bookId": {
+    "$oid": "624bc88f9a8e2c3f8f654324"
+  },
+  "userId": {
+    "$oid": "624bc88f9a8e2c3f8f654321"
+  },
+  "rating": 5,
+  "review": "An excellent read! Highly recommend it.",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654328"
+  },
+  "bookId": {
+    "$oid": "624bc88f9a8e2c3f8f654325"
+  },
+  "userId": {
+    "$oid": "624bc88f9a8e2c3f8f654322"
+  },
+  "rating": 4,
+  "review": "A thought-provoking book. Worth reading.",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654329"
+  },
+  "bookId": {
+    "$oid": "624bc88f9a8e2c3f8f654326"
+  },
+  "userId": {
+    "$oid": "624bc88f9a8e2c3f8f654323"
+  },
+  "rating": 5,
+  "review": "A masterpiece of modern literature.",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  }
+}]

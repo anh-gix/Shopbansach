@@ -1,0 +1,92 @@
+[{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654333"
+  },
+  "name": "Book Lovers Community",
+  "description": "A community for book lovers to discuss and share reviews.",
+  "members": [
+    {
+      "$oid": "624bc88f9a8e2c3f8f654321"
+    },
+    {
+      "$oid": "624bc88f9a8e2c3f8f654322"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://www.studytienganh.vn/upload/2021/06/106162.png\n"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654334"
+  },
+  "name": "Classic Literature Enthusiasts",
+  "description": "A group for those who love classic literature.",
+  "members": [
+    {
+      "$oid": "624bc88f9a8e2c3f8f654321"
+    },
+    {
+      "$oid": "624bc88f9a8e2c3f8f654323"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://www.studytienganh.vn/upload/2021/06/106162.png"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654335"
+  },
+  "name": "Dystopian Fiction Club",
+  "description": "A community for fans of dystopian novels.",
+  "members": [
+    {
+      "$oid": "624bc88f9a8e2c3f8f654322"
+    },
+    {
+      "$oid": "624bc88f9a8e2c3f8f654323"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://www.studytienganh.vn/upload/2021/06/106162.png"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "name": "Book Lovers Communityaaa",
+  "description": "A communitya for book lovers to discuss and share reviews.",
+  "members": [
+    {
+      "$oid": "624bc88f9a8e2c3f8f654401"
+    },
+    {
+      "$oid": "624bc88f9a8e2c3f8f654402"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://www.studytienganh.vn/upload/2021/06/106162.png"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654402"
+  },
+  "name": "Literature Enthusiastsaa",
+  "description": "A group for those who love classic and modern literature.",
+  "members": [
+    {
+      "$oid": "624bc88f9a8e2c3f8f654401"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "image": "https://www.studytienganh.vn/upload/2021/06/106162.png"
+}]

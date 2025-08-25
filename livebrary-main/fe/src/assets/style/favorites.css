@@ -1,0 +1,127 @@
+/* =================== FAVORITES STYLES =================== */
+.favorites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.favorites-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2.2rem;
+  text-align: left;
+}
+
+.favorites-grid {
+  display: flex;
+  justify-content: left;
+  gap: 2%;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  margin-top: 3%;
+  background-color: #fff;
+  margin-bottom: 3%;
+  padding: 3%;
+  max-height: 900px;
+}
+
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* This ensures the BookCard component takes up the available space */
+.favorite-item .book-card {
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.btn-remove {
+  background-color: #f8f8f8;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 6%;
+}
+
+.btn-remove:hover {
+  background-color: #fdf1f0;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.empty-favorites {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.empty-favorites p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.btn-browse {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-browse:hover {
+  background-color: #3d9140;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .favorites-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .btn-remove {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .empty-favorites p {
+    font-size: 1rem;
+  }
+
+  .btn-browse {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

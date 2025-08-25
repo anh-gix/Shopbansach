@@ -1,0 +1,49 @@
+1. Books Endpoints
+GET http://localhost:9999/book/getAllBook: Lấy tất cả sách
+POST http://localhost:9999/book/addBook: Tạo sách mới
+GET http://localhost:9999/book/:id: Lấy sách theo ID
+PUT http://localhost:9999/book/updateBook/:id: Cập nhật sách theo ID
+DELETE http://localhost:9999/book/deleteBook/:id: Xóa sách theo ID
+GET http://localhost:9999/book/genre/624bc88f9a8e2c3f8f654321
+GET http://localhost:9999/book/filter?name=gatsby&author=fitzgerald&category=624bc88f9a8e2c3f8f654321
+PUT http://localhost:9999/community/updateCommunity/624bc88f9a8e2c3f8f654321
+
+2. Communities Endpoints
+POST http://localhost:9999/community/createCommunity: Tạo cộng đồng mới
+GET http://localhost:9999/community/getAllCommunity: Lấy tất cả cộng đồng
+GET http://localhost:9999/community/:id: Lấy cộng đồng theo ID
+PUT http://localhost:9999/community/updateCommunity/:id: Cập nhật cộng đồng theo ID
+DELETE http://localhost:9999/community/deleteCommunity/:id: Xóa cộng đồng theo ID
+
+3. Favorites Endpoints
+POST http://localhost:9999/favorite/addToFavorite: Thêm sách vào danh sách yêu thích
+GET http://localhost:9999/favorite/user/:userId: Lấy danh sách yêu thích của người dùng theo userId
+DELETE http://localhost:9999/favorite/:userId/:bookId: Xóa sách khỏi danh sách yêu thích của người dùng
+
+4. Genres Endpoints
+POST http://localhost:9999/genres/createGenres: Tạo thể loại sách mới
+GET http://localhost:9999/genres/getAllGenres: Lấy tất cả thể loại sách
+GET http://localhost:9999/genres/:id: Lấy thể loại sách theo ID
+PUT http://localhost:9999/genres/updateGenres/:id : Cập nhật thể loại sách theo ID
+DELETE http://localhost:9999/genres/deleteGenres/:id: Xóa thể loại sách theo ID
+
+5. Posts Endpoints
+POST http://localhost:9999/post/createPost: Tạo bài viết mới
+GET http://localhost:9999/post/community/:communityId: Lấy bài viết theo ID cộng đồng
+GET http://localhost:9999/post/:id: Lấy bài viết theo ID
+PUT http://localhost:9999/post/:id: Cập nhật bài viết theo ID
+DELETE http://localhost:9999/post/:id: Xóa bài viết theo ID
+
+6. Reviews Endpoints
+POST http://localhost:9999/review/addReview: Thêm đánh giá cho sách
+GET http://localhost:9999/review/:bookId: Lấy tất cả đánh giá của sách theo bookId
+
+7. Users Endpoints
+GET http://localhost:9999/user/getAll: Lấy tất cả người dùng
+POST http://localhost:9999/user/register: Đăng ký người dùng
+POST http://localhost:9999/user/login: Đăng nhập người dùng
+PUT http://localhost:9999/user/:userId: Cập nhật thông tin người dùng theo userId
+
+
+
+ALT+D để chạy puml (show erd)

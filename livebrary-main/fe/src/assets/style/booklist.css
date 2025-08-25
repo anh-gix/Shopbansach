@@ -1,0 +1,66 @@
+.book-list-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  margin-top: 3%;
+  background-color: #fff;
+  margin-bottom: 3%;
+  min-height: 900px;
+}
+
+.book-list-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.book-list-content {
+  display: flex;
+  gap: 30px;
+}
+
+.books-grid {
+  width: 80%;
+  display: flex;
+  gap: 1%;
+  flex-wrap: wrap;
+}
+
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #666;
+  background-color: white;
+}
+
+/* .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 8px;
+}
+
+.pagination button {
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #333;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background-color: #f1f1f1;
+}
+
+.pagination button.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+} */

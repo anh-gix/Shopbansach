@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "title": "Tầm quan trọng của việc đọc sách",
+  "content": "Đọc sách không chỉ giúp nâng cao kiến thức mà còn giúp cải thiện tư duy và sức khỏe tinh thần.",
+  "communityId": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "userId": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654402"
+  },
+  "title": "Các sách nên đọc trong năm 2025",
+  "content": "Danh sách các cuốn sách đáng đọc trong năm 2025, bao gồm nhiều thể loại từ văn học đến phát triển bản thân.",
+  "communityId": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "userId": {
+    "$oid": "624bc88f9a8e2c3f8f654402"
+  },
+  "createdAt": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654403"
+  },
+  "title": "Làm thế nào để duy trì thói quen đọc sách?",
+  "content": "Chia sẻ các mẹo và chiến lược giúp bạn duy trì thói quen đọc sách hàng ngày dù lịch trình có bận rộn.",
+  "communityId": {
+    "$oid": "624bc88f9a8e2c3f8f654402"
+  },
+  "userId": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "createdAt": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  }
+}]

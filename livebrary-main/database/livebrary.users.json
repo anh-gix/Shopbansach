@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654321"
+  },
+  "email": "user1@example.com",
+  "username": "user1",
+  "password": "hashed_password1",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "role": "true"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654322"
+  },
+  "email": "user2@example.com",
+  "username": "user2",
+  "password": "hashed_password2",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "role": "true"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654323"
+  },
+  "email": "user3@example.com",
+  "username": "user3",
+  "password": "hashed_password3",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "role": "true"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654401"
+  },
+  "email": "user10@example.com",
+  "username": "user10",
+  "password": "hashed_password10",
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "role": "true"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654402"
+  },
+  "email": "admin@example.com",
+  "username": "admin",
+  "password": "admin1234",
+  "createdAt": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "role": "false"
+}]

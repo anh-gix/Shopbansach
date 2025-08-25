@@ -1,0 +1,44 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "893a7ffc-1c2e-4d47-acb3-782312d2bd8e",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1742061665288"
+        }
+      },
+      "favorite": {
+        "name": "tu"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    },
+    {
+      "id": "d3dc5b9f-ede2-4e2b-b2b6-0d5d5fa20727",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1742062291037"
+        }
+      },
+      "favorite": {
+        "name": "localhost:27017"
+      },
+      "savedConnectionType": "favorite",
+      "connectionOptions": {
+        "connectionString": "mongodb://root:123456@localhost:27017/hoidanit?authSource=admin",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}

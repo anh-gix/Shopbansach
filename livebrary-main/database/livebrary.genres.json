@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654321"
+  },
+  "name": "Classic",
+  "description": "A genre that represents classic literature."
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654322"
+  },
+  "name": "Dystopian",
+  "description": "A genre of speculative fiction that explores social and political structures in a dark, often controlled future."
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654323"
+  },
+  "name": "Fiction",
+  "description": "A genre of literature that is primarily based on the imagination."
+}]

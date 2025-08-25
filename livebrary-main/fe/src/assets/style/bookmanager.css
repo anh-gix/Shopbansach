@@ -1,0 +1,218 @@
+/* ====== Container chính ====== */
+.manage-service-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 4px 8px;
+  margin-top: 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ====== Tiêu đề ====== */
+.manage-service-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ====== Nút Thêm Dịch Vụ ====== */
+.manage-service-add-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px;
+}
+
+.manage-service-add-btn:hover {
+  background-color: #27ae60;
+}
+
+/* ====== Bảng Quản Lý Dịch Vụ ====== */
+.manage-service-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px;
+}
+
+/* ====== Tiêu đề bảng ====== */
+.manage-service-table th {
+  background-color: #2c3e50;
+  color: white;
+  font-size: 16px;
+  padding: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ====== Nội dung bảng ====== */
+.manage-service-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.manage-service-table tbody tr:hover {
+  background-color: #f4f6f8;
+}
+
+/* ====== Bố cục nút hành động ====== */
+.manage-service-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Khoảng cách giữa các nút */
+}
+
+.manage-service-edit-btn,
+.manage-service-delete-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.manage-service-edit-btn:hover {
+  background-color: #e67e22;
+}
+
+.manage-service-delete-btn {
+  background-color: #e74c3c;
+}
+
+.manage-service-delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ====== Modal Xóa ====== */
+.manage-service-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* ====== Nút Lưu, Hủy, Xóa ====== */
+.manage-service-modal .modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; /* Spacing between buttons */
+  margin-top: 20px;
+}
+
+.manage-service-modal .modal-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Ensure buttons take equal space */
+}
+
+.manage-service-modal .modal-actions button:nth-child(1) {
+  background-color: #4caf50;
+  color: white;
+}
+
+.manage-service-modal .modal-actions button:nth-child(2) {
+  background-color: #f44336;
+  color: white;
+}
+
+.manage-service-modal .modal-actions button:hover {
+  opacity: 0.8;
+}
+
+/* ====== Pagination Styles ====== */
+.manage-service-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.manage-service-prev-btn,
+.manage-service-next-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.manage-service-prev-btn:disabled,
+.manage-service-next-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.manage-service-prev-btn:hover,
+.manage-service-next-btn:hover {
+  background-color: #27ae60;
+}
+
+.manage-service-prev-btn:focus,
+.manage-service-next-btn:focus {
+  outline: none;
+}
+
+.manage-service-prev-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.manage-service-next-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

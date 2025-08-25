@@ -1,0 +1,294 @@
+/* =================== BOOK DETAIL STYLES =================== */
+.book-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2% 3%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  margin-top: 3%;
+  background-color: #fff;
+  margin-bottom: 3%;
+}
+
+/* Header Section - Book Cover and Info */
+.book-detail-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.book-detail-book-cover {
+  width: 30%;
+  height: 55vh;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.book-detail-book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.book-info p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.book-info h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.book-author {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-right: 5px;
+}
+
+.rating-value {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+.review-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.book-meta {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.book-meta p {
+  margin: 8px 0;
+  font-size: 1rem;
+  padding-bottom: 1%;
+  color: #444;
+}
+
+.book-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-favorite,
+.btn-share {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-favorite {
+  background-color: #fff;
+  border: 1px solid #00b6fe;
+  color: #00b6fe;
+}
+
+.btn-favorite:hover {
+  background-color: #bedef6;
+}
+
+.btn-favorite.active {
+  background-color: #00b6fe;
+  color: white;
+}
+
+.btn-share {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  color: #555;
+}
+
+.btn-share:hover {
+  background-color: #e5e5e5;
+}
+
+/* Book Description */
+.book-description {
+  margin-bottom: 40px;
+}
+
+.book-description h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.book-description p {
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+}
+
+/* General Section Styles */
+.book-reviews,
+.book-recommendations {
+  margin-bottom: 40px;
+}
+
+.book-reviews h2,
+.book-recommendations h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Write Review Section */
+.write-review {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.write-review h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.rating-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star-rating {
+  display: flex;
+  margin-left: 10px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star:hover,
+.star.active {
+  color: #ffd700;
+}
+
+.write-review textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 15px;
+  font-family: inherit;
+}
+
+.write-review textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.btn-submit {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #3d9140;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-detail-header {
+    flex-direction: column;
+  }
+
+  .book-cover {
+    max-width: 220px;
+    margin: 0 auto 20px;
+  }
+
+  .book-info h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .book-author {
+    text-align: center;
+  }
+
+  .book-rating {
+    justify-content: center;
+  }
+
+  .book-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-cover {
+    max-width: 180px;
+  }
+
+  .book-actions {
+    flex-direction: column;
+  }
+
+  .btn-favorite,
+  .btn-share {
+    width: 100%;
+    text-align: center;
+  }
+}

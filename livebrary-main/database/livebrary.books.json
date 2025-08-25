@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654324"
+  },
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "description": "A novel about the American Dream and its disillusionment.",
+  "genre": {
+    "$oid": "624bc88f9a8e2c3f8f654321"
+  },
+  "publicationYear": 1925,
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://cdn.dc5.ro/img-prod/1630051033-0.jpeg"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654325"
+  },
+  "title": "1984",
+  "author": "George Orwell",
+  "description": "A dystopian novel set in a totalitarian society under constant surveillance.",
+  "genre": {
+    "$oid": "624bc88f9a8e2c3f8f654322"
+  },
+  "publicationYear": 1949,
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://tse4.mm.bing.net/th?id=OIP.LTr-PoAlBaNBYcVODU_1IQHaL2&pid=Api&P=0&h=180"
+},
+{
+  "_id": {
+    "$oid": "624bc88f9a8e2c3f8f654326"
+  },
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "description": "A novel about racial injustice in the Deep South.",
+  "genre": {
+    "$oid": "624bc88f9a8e2c3f8f654323"
+  },
+  "publicationYear": 1960,
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://image.tmdb.org/t/p/original/oe88ZKHH1g0HWl7oReFpHTIryiJ.jpg\n"
+},
+{
+  "_id": {
+    "$oid": "67d679f865d9ff421be796b7"
+  },
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "description": "A novel about the American Dream and its disillusionment.",
+  "genre": {
+    "$oid": "624bc88f9a8e2c3f8f654323"
+  },
+  "publicationYear": 1925,
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://cdn.dc5.ro/img-prod/1630051033-0.jpeg"
+},
+{
+  "_id": {
+    "$oid": "67d67a0365d9ff421be796b8"
+  },
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "description": "A novel about racial injustice in the Deep South.",
+  "genre": {
+    "$oid": "624bc88f9a8e2c3f8f654323"
+  },
+  "publicationYear": 1960,
+  "createdAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "image": "https://image.tmdb.org/t/p/original/oe88ZKHH1g0HWl7oReFpHTIryiJ.jpg\n"
+}]
