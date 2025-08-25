@@ -144,7 +144,7 @@ exports.updateStatus = async (req, res) => {
   try {
     const { orderId } = req.params;
     const { status } = req.body;
-    const order = await Order.findByIdAndUpdate(orderId, { status, updatedAt: Date.now() }, { new: true });
+  const order = await Order.findByIdAndUpdate(orderId, { status, updatedAt: new Date() }, { new: true });
     if (!order) return res.status(404).json({ message: 'Order not found' });
     return res.status(200).json({ message: 'Order updated', order });
   } catch (err) {

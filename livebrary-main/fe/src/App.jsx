@@ -1,3 +1,12 @@
+import SalesDashboard from "./components/admin/SalesDashboard";
+<Route
+  path="/admin/sales-dashboard"
+  element={
+    <ProtectedRoute requiredRole={false}>
+      <SalesDashboard />
+    </ProtectedRoute>
+  }
+/>
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/user/HomePage";
 import Login from "./components/user/Login";
@@ -139,6 +148,14 @@ function App() {
           element={
             <ProtectedRoute requiredRole={false}>
               <DetailOrder />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/sales-dashboard"
+          element={
+            <ProtectedRoute requiredRole={false}>
+              <SalesDashboard />
             </ProtectedRoute>
           }
         />

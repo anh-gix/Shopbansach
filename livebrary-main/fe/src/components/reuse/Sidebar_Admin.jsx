@@ -67,6 +67,12 @@ const Sidebar_Admin = ({ isSidebarOpen, toggleSidebar }) => {
         >
           <FaStore /> Đơn hàng
         </button>
+        <button
+          className={`sidebar-link ${isActive("/admin/sales-dashboard")}`}
+          onClick={() => navigate("/admin/sales-dashboard")}
+        >
+          <FaSearchDollar /> Doanh số
+        </button>
         <button className={`sidebar-link `} onClick={() => logOut()}>
           <CgLogOut /> Đăng Xuất
         </button>

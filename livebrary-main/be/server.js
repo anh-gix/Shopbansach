@@ -12,6 +12,7 @@ const reviewRoutes = require('./routes/reviewRoutes')
 const cartRoutes = require('./routes/cartRoutes')
 const orderRoutes = require('./routes/orderRoutes')
 const userRoutes = require('./routes/userRoutes')
+const salesRoutes = require('./routes/salesRoutes')
 
 const connectDB = require('./config/db');
 const app = express();
@@ -28,6 +29,7 @@ app.use('/review', reviewRoutes),
   app.use('/user', userRoutes)
 app.use('/cart', cartRoutes)
 app.use('/order', orderRoutes)
+app.use('/sales', salesRoutes)
 const PORT = 9999;
 
 // app.use(async (req, res, next) => {
