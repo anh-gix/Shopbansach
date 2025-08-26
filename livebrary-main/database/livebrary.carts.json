@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "68ac1400855c317c17c790f4"
+  },
+  "user": {
+    "$oid": "68ac0f95f8c651761c8e1401"
+  },
+  "items": [],
+  "subtotal": 0,
+  "updatedAt": {
+    "$date": "2025-08-25T13:32:01.526Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68ac15e6637d5ae508d1352e"
+  },
+  "user": {
+    "$oid": "68ac15d7637d5ae508d13514"
+  },
+  "items": [
+    {
+      "book": {
+        "$oid": "624bc88f9a8e2c3f8f654326"
+      },
+      "quantity": 1,
+      "unitPrice": 80000,
+      "lineTotal": 80000
+    }
+  ],
+  "subtotal": 80000,
+  "updatedAt": {
+    "$date": "2025-08-25T07:51:02.148Z"
+  },
+  "__v": 0
+}]

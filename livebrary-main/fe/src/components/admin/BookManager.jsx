@@ -28,7 +28,7 @@ const ServiceModal = ({ type, data, onSave, onClose, genres }) => {
       !bookData.author ||
       !bookData.description ||
       !bookData.genre ||
-      !bookData.publicationYear ||
+      !bookData.publicationDate ||
       !bookData.image ||
       bookData.price === undefined ||
       bookData.stock === undefined
@@ -36,7 +36,23 @@ const ServiceModal = ({ type, data, onSave, onClose, genres }) => {
       toast.error("Vui lòng điền đầy đủ thông tin!");
       return;
     }
-    const bookDataToSave = { ...bookData };
+    // Validate publication date and derive year
+    const pubDate = new Date(bookData.publicationDate);
+    if (isNaN(pubDate.getTime())) {
+      toast.error("Ngày xuất bản không hợp lệ!");
+      return;
+    }
+    const today = new Date();
+    if (pubDate > today) {
+      toast.error("Ngày xuất bản không được lớn hơn hiện tại!");
+      return;
+    }
+    const pubYear = pubDate.getFullYear();
+    const bookDataToSave = {
+      ...bookData,
+      publicationDate: pubDate.toISOString(),
+      publicationYear: pubYear,
+    };
     onSave(bookDataToSave);
   };
 
@@ -81,10 +97,10 @@ const ServiceModal = ({ type, data, onSave, onClose, genres }) => {
         />
 
         <input
-          type="number"
-          name="publicationYear"
+          type="date"
+          name="publicationDate"
           placeholder="Ngày xuất bản"
-          value={bookData.publicationYear || ""}
+          value={bookData.publicationDate ? String(bookData.publicationDate).substring(0, 10) : ""}
           onChange={handleChange}
         />
 
@@ -204,7 +220,8 @@ const BookManager = () => {
       author: updatedBook.author,
       description: updatedBook.description,
       genre: updatedBook.genre,
-      publicationYear: updatedBook.publicationYear,
+      publicationDate: updatedBook.publicationDate,
+      publicationYear: updatedBook.publicationDate ? new Date(updatedBook.publicationDate).getFullYear() : Number(updatedBook.publicationYear),
       image: updatedBook.image,
       price: Number(updatedBook.price),
       stock: Number(updatedBook.stock),
@@ -230,7 +247,10 @@ const BookManager = () => {
         toast.success("Sách đã được xóa thành công!");
         setShowModal(false);
       })
-      .catch(() => toast.error("Xóa sách thất bại!"));
+      .catch((error) => {
+        const message = error?.response?.data?.message || "Xóa sách thất bại!";
+        toast.error(message);
+      });
   };
 
   const handleAddBookClick = () => {
@@ -284,6 +304,7 @@ const BookManager = () => {
                 <th>Ngày xuất bản</th>
                 <th>Giá</th>
                 <th>Tồn kho</th>
+                <th>Trạng thái</th>
               </tr>
             </thead>
             <tbody>
@@ -293,9 +314,15 @@ const BookManager = () => {
                   <td>{book.author}</td>
                   <td>{book.description}</td>
                   <td>{genres.find((g) => g._id == book.genre)?.name}</td>
-                  <td>{book.publicationYear}</td>
+                  <td>{book.publicationDate ? new Date(book.publicationDate).toLocaleDateString('vi-VN') : book.publicationYear}</td>
                   <td>{book.price?.toLocaleString('vi-VN')}₫</td>
                   <td>{book.stock}</td>
+                  <td>
+                    {book.status === 'out_of_stock' && 'Hết hàng'}
+                    {book.status === 'low_stock' && 'Sắp hết'}
+                    {book.status === 'in_stock' && 'Còn hàng'}
+                    {!book.status && (book.stock <= 0 ? 'Hết hàng' : book.stock <= 5 ? 'Sắp hết' : 'Còn hàng')}
+                  </td>
                   <td>
                     <div className="manage-service-actions">
                       <button

@@ -72,4 +72,36 @@
     "$date": "2025-03-16T00:00:00.000Z"
   },
   "role": "false"
+},
+{
+  "_id": {
+    "$oid": "68ac0f95f8c651761c8e1401"
+  },
+  "email": "acount7@gmail.com",
+  "username": "xxx",
+  "password": "$2b$10$zoHwZRYwINf6qEgkKcqyM.g56Dv78W1rHhZjKxAWJTKOSqIiWEw/e",
+  "role": false,
+  "createdAt": {
+    "$date": "2025-08-25T07:24:05.248Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-25T07:24:05.248Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ac15d7637d5ae508d13514"
+  },
+  "email": "anhminhngo9@gmail.com",
+  "username": "ANH",
+  "password": "$2b$10$oi6LtgBLOrCloZipsOW2YulksY0R3iwld.cO/hmkeHfEwhZZJxsIK",
+  "role": true,
+  "createdAt": {
+    "$date": "2025-08-25T07:50:47.313Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-25T07:50:47.313Z"
+  },
+  "__v": 0
 }]

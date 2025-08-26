@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const Book = require("../models/book");
+const Order = require("../models/order");
 
 exports.createBook = async (req, res) => {
   try {
-    const { title, author, description, genre, publicationYear, image, price, stock, publisher } =
+    const { title, author, description, genre, publicationYear, publicationDate, image, price, stock, publisher } =
       req.body;
 
     const existingBook = await Book.findOne({ title });
@@ -11,15 +12,29 @@ exports.createBook = async (req, res) => {
       return res.status(400).json({ message: "Book title already exists" });
     }
 
+    // Basic validation for publicationYear
+    const pubYearNum = Number(publicationYear || (publicationDate ? new Date(publicationDate).getFullYear() : undefined));
+    if (!Number.isInteger(pubYearNum) || pubYearNum < 0 || pubYearNum > new Date().getFullYear()) {
+      return res.status(400).json({ message: "Năm xuất bản không hợp lệ" });
+    }
+
+    const computedStatus = Number(stock) <= 0
+      ? "out_of_stock"
+      : Number(stock) <= 5
+      ? "low_stock"
+      : "in_stock";
+
     const newBook = new Book({
       title,
       author,
       description,
       genre,
-      publicationYear,
+      publicationYear: pubYearNum,
+      publicationDate: publicationDate ? new Date(publicationDate) : undefined,
       image,
       price,
       stock,
+      status: computedStatus,
       publisher,
     });
     await newBook.save();
@@ -55,6 +70,13 @@ exports.getBookById = async (req, res) => {
 exports.deleteBook = async (req, res) => {
   try {
     const { id } = req.params;
+    // Check if this book exists in any order items
+    const orderHasBook = await Order.findOne({ "items.book": id }).lean();
+    if (orderHasBook) {
+      return res
+        .status(400)
+        .json({ message: "Không thể xóa sách vì đang tồn tại trong đơn hàng" });
+    }
     const deletedBook = await Book.findByIdAndDelete(id);
     if (!deletedBook) {
       return res.status(404).json({ message: "Book not found" });
@@ -67,9 +89,21 @@ exports.deleteBook = async (req, res) => {
 
 exports.updateBook = async (req, res) => {
   try {
-    const { title, author, description, genre, publicationYear, image, price, stock, sku, isbn, publisher } =
+    const { title, author, description, genre, publicationYear, publicationDate, image, price, stock, sku, isbn, publisher } =
       req.body;
     const { id } = req.params;
+
+    // Basic validation for publicationYear
+    const pubYearNum = Number(publicationYear || (publicationDate ? new Date(publicationDate).getFullYear() : undefined));
+    if (!Number.isInteger(pubYearNum) || pubYearNum < 0 || pubYearNum > new Date().getFullYear()) {
+      return res.status(400).json({ message: "Năm xuất bản không hợp lệ" });
+    }
+
+    const computedStatus = Number(stock) <= 0
+      ? "out_of_stock"
+      : Number(stock) <= 5
+      ? "low_stock"
+      : "in_stock";
 
     const updatedBook = await Book.findByIdAndUpdate(
       id,
@@ -78,10 +112,12 @@ exports.updateBook = async (req, res) => {
         author,
         description,
         genre,
-        publicationYear,
+        publicationYear: pubYearNum,
+        publicationDate: publicationDate ? new Date(publicationDate) : undefined,
         image,
         price,
         stock,
+        status: computedStatus,
         publisher,
         updatedAt: Date.now(),
       },

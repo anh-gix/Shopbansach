@@ -13,9 +13,14 @@
     "$date": "2025-03-15T00:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-03-15T00:00:00.000Z"
+    "$date": "2025-08-25T07:29:58.358Z"
   },
-  "image": "https://cdn.dc5.ro/img-prod/1630051033-0.jpeg"
+  "image": "https://cdn.dc5.ro/img-prod/1630051033-0.jpeg",
+  "isbn": "12",
+  "price": 20000,
+  "publisher": "Nhi đồng",
+  "sku": "14",
+  "stock": 10
 },
 {
   "_id": {
@@ -32,9 +37,12 @@
     "$date": "2025-03-15T00:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-03-15T00:00:00.000Z"
+    "$date": "2025-08-25T07:30:08.037Z"
   },
-  "image": "https://tse4.mm.bing.net/th?id=OIP.LTr-PoAlBaNBYcVODU_1IQHaL2&pid=Api&P=0&h=180"
+  "image": "https://tse4.mm.bing.net/th?id=OIP.LTr-PoAlBaNBYcVODU_1IQHaL2&pid=Api&P=0&h=180",
+  "price": 30000,
+  "publisher": "Nhi đồng",
+  "stock": 12
 },
 {
   "_id": {
@@ -51,9 +59,12 @@
     "$date": "2025-03-15T00:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-03-15T00:00:00.000Z"
+    "$date": "2025-08-25T07:30:16.398Z"
   },
-  "image": "https://image.tmdb.org/t/p/original/oe88ZKHH1g0HWl7oReFpHTIryiJ.jpg\n"
+  "image": "https://image.tmdb.org/t/p/original/oe88ZKHH1g0HWl7oReFpHTIryiJ.jpg\n",
+  "price": 80000,
+  "publisher": "Nhi đồng",
+  "stock": 12
 },
 {
   "_id": {
@@ -70,9 +81,12 @@
     "$date": "2025-03-15T00:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-03-15T00:00:00.000Z"
+    "$date": "2025-08-25T07:43:41.971Z"
   },
-  "image": "https://cdn.dc5.ro/img-prod/1630051033-0.jpeg"
+  "image": "https://cdn.dc5.ro/img-prod/1630051033-0.jpeg",
+  "price": 70000,
+  "publisher": "Nhi đồng",
+  "stock": 14
 },
 {
   "_id": {
@@ -89,7 +103,10 @@
     "$date": "2025-03-15T00:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-03-15T00:00:00.000Z"
+    "$date": "2025-08-25T07:43:52.204Z"
   },
-  "image": "https://image.tmdb.org/t/p/original/oe88ZKHH1g0HWl7oReFpHTIryiJ.jpg\n"
+  "image": "https://image.tmdb.org/t/p/original/oe88ZKHH1g0HWl7oReFpHTIryiJ.jpg\n",
+  "price": 90000,
+  "publisher": "Nhi đồng",
+  "stock": 16
 }]

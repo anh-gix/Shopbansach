@@ -19,9 +19,19 @@ const bookSchema = new Schema({
     ref: "Genre",
     required: true,
   },
+  publicationDate: {
+    type: Date,
+  },
   publicationYear: {
     type: Number,
     required: true,
+    validate: {
+      validator: function (value) {
+        const currentYear = new Date().getFullYear();
+        return Number.isInteger(value) && value >= 0 && value <= currentYear;
+      },
+      message: "Năm xuất bản không hợp lệ",
+    },
   },
   createdAt: {
     type: Date,
@@ -44,6 +54,11 @@ const bookSchema = new Schema({
     type: Number,
     required: true,
     min: 0
+  },
+  status: {
+    type: String,
+    enum: ["in_stock", "low_stock", "out_of_stock"],
+    default: "in_stock",
   },
   publisher: {
     type: String
